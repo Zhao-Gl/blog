@@ -1,0 +1,14 @@
+// 定义主题颜色
+$themes: (
+  day: (
+    /*字体*/ font-size-lg: 14px,
+    /*颜色*/ bg-color: #f0f0f0,
+    font-color: #000,
+  ),
+
+  dark: (
+    /*字体*/ font-size-lg: 14px,
+    /*颜色*/ bg-color: #001529,
+    font-color: #fff,
+  ),
+);

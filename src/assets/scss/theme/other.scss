@@ -1,0 +1,7 @@
+@mixin home() {
+  @include themeify {
+    background-color: themed("bg-color");
+    font-size: themed("font-size-lg");
+    color: themed("font-color");
+  }
+}
