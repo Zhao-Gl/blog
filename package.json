@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "description": "Zhao's web",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
