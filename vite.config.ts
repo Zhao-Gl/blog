@@ -25,7 +25,7 @@ export default defineConfig({
     },
   },
   server: {
-    host: "192.168.1.8",
+    host: "localhost",
     port: 3000,
     //   proxy: {
     //     // 选项写法
