@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>首页11</div>
+  <div>main</div>
 </template>
 
 <style scoped>

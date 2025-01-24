@@ -17,13 +17,13 @@
         </ul>
         <div class="h-r-content">
           <div class="h-r-content-title">
-            - Hello, I'm John Doe
+            - Hello, I'm Zhao Gl
           </div>
           <div class="h-r-content-text">
-            <span>I am a web designer and developer based in New York City.</span>
+            <span>I am a web developer and developer based in China Xi'An.</span>
           </div>
           <div class="h-r-content-descriptions">
-            <span>I am a web designer and developer based in New York City.</span>
+            <span>descriptions</span>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ const chooseNavTitle = (id:number) => {
 .h-r-nav{
   display: flex;
   list-style: none;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5;
   transition: all 0.5s ease-in-out;
@@ -124,23 +124,23 @@ const chooseNavTitle = (id:number) => {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px;
 }
 .h-r-content-title{
-  font-size: 12px;
+  font-size: 0.8rem;
   color: gray;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1.5;
-  & span{
-    display: block;
-  }
-  & span:first-child{
-    margin-bottom: 10px;
-  }
-  & span:last-child{
-    margin-top: 10px;
-  }
+  margin-bottom: 20px;
+}
+.h-r-content-text{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.h-r-content-descriptions{
+  font-size: 1.2rem;
+  color: gray;
+  line-height: 1.5;
 }
 </style>
