@@ -1,0 +1,6 @@
+/*引入全局变量*/
+@import url("./globalVar.css");
+/*引入通用样式*/
+@import url("./globalCommon.css");
+/*引入媒体查询样式*/
+@import url("./globalMedia.css");

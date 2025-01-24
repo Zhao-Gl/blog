@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <NuxtLayout name="header"></NuxtLayout>
     <NuxtLayout name="main">
       <template #main>
@@ -11,3 +11,5 @@
 </template>
 <script setup lang="ts">
 </script>
+<style>
+</style>

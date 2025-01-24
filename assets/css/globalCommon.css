@@ -1,0 +1,5 @@
+/*全局通用样式*/
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

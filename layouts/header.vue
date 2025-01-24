@@ -1,15 +1,146 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div class="header">Header</div>
+  <div class="header">
+    <div class="h-container">
+      <div class="h-left">
+        h-left
+      </div>
+      <div class="h-right">
+        <ul class="h-r-nav">
+          <li v-for="(item, index) in rightTitles" :key="item.id">
+            <div :class="item.active? 'h-r-li-active' : ''">
+              <span class="h-r-li-text" @click="()=>{chooseNavTitle(item.id)}">
+                {{ item.text }}
+                <span class="h-r-li-sign" :class="item.active? 'h-r-li-sign-show' : ''">·</span>
+              </span>
+            </div>
+          </li>
+        </ul>
+        <div class="h-r-content">
+          <div class="h-r-content-title">
+            - Hello, I'm John Doe
+          </div>
+          <div class="h-r-content-text">
+            <span>I am a web designer and developer based in New York City.</span>
+          </div>
+          <div class="h-r-content-descriptions">
+            <span>I am a web designer and developer based in New York City.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script setup lang="ts">
+const rightTitles = reactive([
+  {
+    id: 1,
+    text: 'Services',
+    active: true,
+  },
+  {
+    id: 2,
+    text: 'Works',
+    active: false,
+  },
+  {
+    id: 3,
+    text: 'Blog',
+    active: false,
+  }
+])
+
+/**
+ * 切换导航栏
+ * @param id
+ */
+const chooseNavTitle = (id:number) => {
+  rightTitles.forEach(item => {
+    item.active = item.id === id;
+  })
+}
+</script>
 
 <style scoped>
 .header{
-  width: 100%;
-  height: 60px;
-  text-align: center;
+  background-color: #323647;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.h-container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.h-left{
+  width: 60%;
+  height: 600px;
+  background-image: url("https://picsum.photos/1000/600");
+}
+.h-right{
+  width: 40%;
+  height: 600px;
+  padding: 20px 0 0 40px;
+}
+.h-r-nav{
+  display: flex;
+  list-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 80px;
+  & li{
+    color: gray;
+    width: 40%;
+    cursor: pointer;
+    & .h-r-li-text{
+      display: inline-block;
+      position: relative;
+      & .h-r-li-sign{
+        display: none;
+        color: #efa649;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50%;
+      }
+    }
+  }
+  & li:hover{
+    color: #f1f0e1;
+  }
+}
+/*激活的li*/
+.h-r-li-active{
+  color: #f1f0e1;
+}
+/*显示的下标*/
+.h-r-li-sign-show{
+  display: inline-block !important;
+}
+.h-r-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+.h-r-content-title{
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  & span{
+    display: block;
+  }
+  & span:first-child{
+    margin-bottom: 10px;
+  }
+  & span:last-child{
+    margin-top: 10px;
+  }
 }
 </style>
