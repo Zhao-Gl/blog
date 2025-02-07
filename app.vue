@@ -1,15 +1,12 @@
 <template>
-  <div class="app">
-    <NuxtLayout name="header"></NuxtLayout>
-    <NuxtLayout name="main">
-      <template #main>
-        <NuxtPage />
-      </template>
-    </NuxtLayout>
-    <NuxtLayout name="footer"></NuxtLayout>
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
 <script setup lang="ts">
+// Any app-wide setup can go here
 </script>
 <style>
+@import '~/assets/css/tailwind.css';
 </style>

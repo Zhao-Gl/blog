@@ -1,11 +1,14 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div>main</div>
+  <div>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Contact />
+  </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+// No need to import components, Nuxt will auto-import them
+</script>
 
-</style>

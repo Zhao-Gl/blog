@@ -1,6 +1,65 @@
-/*引入全局变量*/
-@import url("./globalVar.css");
-/*引入通用样式*/
-@import url("./globalCommon.css");
-/*引入媒体查询样式*/
-@import url("./globalMedia.css");
+/* 定义全局变量 */
+:root{
+    --background-color: #101015;
+    --text-color:#f1f0e1
+}
+/* 全局通用样式 */
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* 媒体查询样式 */
+/* 超小屏幕样式 */
+@media screen and (max-width: 575px) {
+    body {
+        width: 575px;
+    }
+    .h-left{
+        display: none;
+    }
+    .h-right{
+        width: 100% !important;
+    }
+}
+
+/* 小屏幕样式 */
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    body {
+        width: 601px;
+    }
+    .h-left{
+        display: none;
+    }
+    .h-right{
+        width: 100% !important;
+    }
+}
+
+/* 中等屏幕样式 */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        width: 768px;
+    }
+}
+
+/* 大屏幕样式 */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    body {
+        width: 992px;
+    }
+}
+
+/* 超大屏幕样式 */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    body {
+        width: 1200px;
+    }
+}
+
+/* 1080p */
+@media screen and (min-width: 1920px) {
+    body {
+        width: 1900px;
+    }
+}
