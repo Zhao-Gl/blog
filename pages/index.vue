@@ -1,10 +1,10 @@
 <template>
   <div>
     <Hero />
-    <About />
     <Skills />
     <Projects />
     <Contact />
+    <NuxtLayout name="footer"></NuxtLayout>
   </div>
 </template>
 

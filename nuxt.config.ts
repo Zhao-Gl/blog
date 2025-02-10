@@ -5,16 +5,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // 全局css配置
   css: [
-    '@/assets/css/reset.css',
-    '@/assets/css/global.css',
-    "~/assets/css/tailwind.css"
+    '~/assets/css/reset.css',
+    '~/assets/css/global.css',
   ],
-  postcss: {
-    plugins: {
-      "@tailwindcss/postcss": {},
-      autoprefixer: {},
-    },
-  },
   // 配置后，会在页面渲染之前加载插件 (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     // '@/plugins/element-ui'
