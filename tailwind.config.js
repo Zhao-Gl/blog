@@ -11,49 +11,37 @@ module.exports = {
         "*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+        screens: {
+            sm: '480px',
+            md: '768px',
+            lg: '976px',
+            xl: '1440px',
+        },
+        colors: {
+            'blue': '#1fb6ff',
+            'purple': '#7e5bef',
+            'pink': '#ff49db',
+            'orange': '#ff7849',
+            'green': '#13ce66',
+            'yellow': '#ffc82c',
+            'gray': '#454b5e',
+            'gray-dark': '#363c4c',
+            'gray-light': '#d3dce6',
+        },
+        fontFamily: {
+            sans: ['Graphik', 'sans-serif'],
+            serif: ['Merriweather', 'serif'],
+        },
         extend: {
-            colors: {
-                border: "hsl(var(--border))",
-                input: "hsl(var(--input))",
-                ring: "hsl(var(--ring))",
-                background: "hsl(var(--background))",
-                foreground: "hsl(var(--foreground))",
-                primary: {
-                    DEFAULT: "hsl(var(--primary))",
-                    foreground: "hsl(var(--primary-foreground))",
-                },
-                secondary: {
-                    DEFAULT: "hsl(var(--secondary))",
-                    foreground: "hsl(var(--secondary-foreground))",
-                },
-                destructive: {
-                    DEFAULT: "hsl(var(--destructive))",
-                    foreground: "hsl(var(--destructive-foreground))",
-                },
-                muted: {
-                    DEFAULT: "hsl(var(--muted))",
-                    foreground: "hsl(var(--muted-foreground))",
-                },
-                accent: {
-                    DEFAULT: "hsl(var(--accent))",
-                    foreground: "hsl(var(--accent-foreground))",
-                },
-                popover: {
-                    DEFAULT: "hsl(var(--popover))",
-                    foreground: "hsl(var(--popover-foreground))",
-                },
-                card: {
-                    DEFAULT: "hsl(var(--card))",
-                    foreground: "hsl(var(--card-foreground))",
-                },
+            spacing: {
+                '128': '32rem',
+                '144': '36rem',
             },
             borderRadius: {
-                lg: "var(--radius)",
-                md: "calc(var(--radius) - 2px)",
-                sm: "calc(var(--radius) - 4px)",
-            },
-        },
+                '4xl': '2rem',
+            }
+        }
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [],
 }
 
